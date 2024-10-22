@@ -1,49 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download PC Programs</title>
+    <title>iCloud Bypass Programs</title>
+    
+    <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <style>
-        .download-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
+        body {
+            background-color: #f8f9fa;
         }
-        .container {
-            text-align: center;
-            margin-top: 50px;
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #343a40;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .header h1 {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+
+        /* Program Cards */
+        .program-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .program-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .program-info {
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .program-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .program-company, .program-version {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .download-btn {
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 5px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Programs</h1>
-        <div class="programs">
-            <div class="program">
-                <h3>Broque Ramdisk latest</h3>
-                <button class="btn btn-primary download-btn" onclick="redirectToMonetag('https://luglawhaulsano.net/4/7303793', 'https://www.mediafire.com/folder/gtj8kqqts02yd/Broque+Ramdisk#ytqpe4u9h71ab')">Download</button>
-            </div>
-            <div class="program">
-                <h3>Ic Bypass Tool</h3>
-                <button class="btn btn-primary download-btn" onclick="redirectToMonetag('https://luglawhaulsano.net/4/7303820', 'https://mega.nz/folder/bBxzCDTQ#wnINwah7O5-YgRJvjpuT3g')">Download</button>
-            </div>
-            <!-- Add more programs as needed -->
-        </div>
+    <!-- Header Section -->
+    <div class="header">
+        <i class="fas fa-blog fa-2x"></i>
+        <h1>iCloud Bypass Programs</h1>
     </div>
 
+    <!-- Container for Programs -->
+    <div class="container">
+        <!-- Program 1 -->
+        <div class="program-card">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://via.placeholder.com/100" alt="Program Cover Image">
+                </div>
+                <div class="col-md-8 program-info">
+                    <div class="program-name">Broque Ramdisk Latest</div>
+                    <div class="program-company">Company: Broque Inc.</div>
+                    <div class="program-version">Version: 1.4.5</div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                    <button class="btn btn-primary download-btn" onclick="redirectToMonetag('https://luglawhaulsano.net/4/7303793', 'https://www.mediafire.com/folder/gtj8kqqts02yd/Broque+Ramdisk#ytqpe4u9h71ab')">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://via.placeholder.com/100" alt="Program Cover Image">
+                </div>
+                <div class="col-md-8 program-info">
+                    <div class="program-name">Ic Bypass Tool</div>
+                    <div class="program-company">Company: Ic Tools</div>
+                    <div class="program-version">Version: 2.1.0</div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                    <button class="btn btn-primary download-btn" onclick="redirectToMonetag('https://luglawhaulsano.net/4/7303820', 'https://mega.nz/folder/bBxzCDTQ#wnINwah7O5-YgRJvjpuT3g')">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more program cards here -->
+    </div>
+
+    <!-- JavaScript for Monetag redirect -->
     <script>
         function redirectToMonetag(monetagLink, actualDownloadLink) {
-            // Open Monetag link
+            // Open Monetag link in a new tab
             window.open(monetagLink, '_blank');
-
+            
             // Redirect to actual download page after a delay (e.g., 5 seconds)
             setTimeout(function() {
                 window.location.href = actualDownloadLink;
             }, 5000); // 5 seconds delay
         }
     </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
