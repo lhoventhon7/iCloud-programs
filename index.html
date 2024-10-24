@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iCloud Bypass Programs</title>
-    
+
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
@@ -22,14 +22,29 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #343a40;
+            background-color: #fff; /* Changed to white */
             padding: 20px;
-            color: #fff;
+            color: #000;
         }
 
         .header h1 {
             margin-left: 10px;
             font-size: 24px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
         }
 
         /* Program Cards */
@@ -75,10 +90,70 @@
             font-size: 16px;
             border-radius: 5px;
         }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #343a40;
+            font-size: 24px;
+            margin: 0 15px;
+            filter: blur(0.5px);
+        }
+
+        .footer a:hover {
+            color: #000;
+            filter: none;
+        }
+
+        /* Modal Styles */
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-body iframe {
+            width: 300px; /* Adjusted the width */
+            height: 250px; /* Adjusted the height */
+        }
+
+        .modal-body p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .countdown-timer {
+            font-size: 18px;
+            color: #dc3545;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand text-white" href="#">iCloud Bypass</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">iPad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">iPhone</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Header Section -->
     <div class="header">
         <i class="fas fa-blog fa-2x"></i>
@@ -94,12 +169,12 @@
                     <img src="https://via.placeholder.com/100" alt="Program Cover Image">
                 </div>
                 <div class="col-md-8 program-info">
-                    <div class="program-name">Broque Ramdisk PRO Latest</div>
+                    <div class="program-name">Broque Ramdisk Latest</div>
                     <div class="program-company">Company: Broque Inc.</div>
-                    <div class="program-version">Version:2.8.1 LTS</div>
+                    <div class="program-version">Version: 1.4.5</div>
                 </div>
                 <div class="col-md-2 d-flex align-items-center">
-                    <button class="btn btn-primary download-btn" onclick="redirectToMonetag('https://luglawhaulsano.net/4/7303793', 'https://www.mediafire.com/folder/gtj8kqqts02yd/Broque+Ramdisk#ytqpe4u9h71ab')">Download</button>
+                    <button class="btn btn-primary download-btn" data-toggle="modal" data-target="#adModal" data-download-link="https://www.mediafire.com/folder/gtj8kqqts02yd/Broque+Ramdisk#ytqpe4u9h71ab">Download</button>
                 </div>
             </div>
         </div>
@@ -116,31 +191,79 @@
                     <div class="program-version">Version: 2.1.0</div>
                 </div>
                 <div class="col-md-2 d-flex align-items-center">
-                    <button class="btn btn-primary download-btn" onclick="redirectToMonetag('https://luglawhaulsano.net/4/7303820', 'https://mega.nz/folder/bBxzCDTQ#wnINwah7O5-YgRJvjpuT3g')">Download</button>
+                    <button class="btn btn-primary download-btn" data-toggle="modal" data-target="#adModal" data-download-link="https://mega.nz/folder/bBxzCDTQ#wnINwah7O5-YgRJvjpuT3g">Download</button>
                 </div>
             </div>
         </div>
-
-        <!-- Add more program cards here -->
     </div>
 
-    <!-- JavaScript for Monetag redirect -->
-    <script>
-        function redirectToMonetag(monetagLink, actualDownloadLink) {
-            // Open Monetag link in a new tab
-            window.open(monetagLink, '_blank');
-            
-            // Redirect to actual download page after a delay (e.g., 5 seconds)
-            setTimeout(function() {
-                window.location.href = actualDownloadLink;
-            }, 5000); // 5 seconds delay
-        }
-    </script>
+    <!-- Footer Section -->
+    <div class="footer">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Modal for Interstitial Ad -->
+    <div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document"> <!-- Adjusted the size -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adModalLabel">Advertisement</h5>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://luglawhaulsano.net/4/7303793" frameborder="0"></iframe>
+                    <p class="countdown-timer">You will be redirected in <span id="countdown">20</span> seconds...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeAdBtn" disabled>Close Ad</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to handle ad closure, countdown, and redirection -->
+    <script>
+        var countdownInterval;
+        var countdownTime = 10; // 10 seconds countdown
+
+        $('#adModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var downloadLink = button.data('download-link'); // Extract download link from data attribute
+            var modal = $(this);
+
+            // Reset countdown timer
+            countdownTime = 10;
+            $('#countdown').text(countdownTime);
+            $('#closeAdBtn').prop('disabled', true);
+
+            // Start countdown
+            countdownInterval = setInterval(function () {
+                countdownTime--;
+                $('#countdown').text(countdownTime);
+
+                if (countdownTime <= 0) {
+                    clearInterval(countdownInterval);
+                    $('#closeAdBtn').prop('disabled', false); // Enable the "Close Ad" button
+                    window.location.href = downloadLink; // Redirect to download link after countdown ends
+                }
+            }, 1000);
+        });
+
+        $('#adModal').on('hide.bs.modal', function () {
+            clearInterval(countdownInterval); // Stop countdown if modal is closed manually
+        });
+
+        $('#closeAdBtn').click(function () {
+            $('#adModal').modal('hide');
+        });
+    </script>
 </body>
 
 </html>
